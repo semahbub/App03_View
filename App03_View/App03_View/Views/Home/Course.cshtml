@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Course";
+    string[] clist = (string[])ViewData["cl"];
+}
+
+<h2 class="alert alert-info">Course Information</h2>
+
+<h2 class="text-primary">@ViewBag.title</h2>
+<h2 class="text-primary">@ViewData["sql"]</h2>
+<h2 class="text-primary">@ViewBag.c1</h2>
+
+<br />
+
+@foreach (var item in clist)
+{
+    <h2 class="text-primary">@item</h2>
+
+}

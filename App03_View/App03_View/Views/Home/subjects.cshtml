@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "subjects";
+}
+
+<h2 class="alert alert-info">List of Subject</h2>
+
+<table class="table table-bordered table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>SL No.</th>
+            <th>Subject Name</th>
+            <th>Credit Hour</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in ViewBag.slist)
+        {
+            <tr>
+                <td class="text-center text-primary">@s.Id</td>
+                <td>@s.Name</td>
+                <td class="text-danger text-center">@s.CreditHour</td>
+            </tr>
+        }
+    </tbody>
+</table>
